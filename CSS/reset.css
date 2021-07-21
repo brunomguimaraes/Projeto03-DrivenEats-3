@@ -93,6 +93,7 @@ video {
   vertical-align: baseline;
   text-decoration: none;
   color:inherit;
+  background-color: inherit;
 }
 /* HTML5 display-role reset for older browsers */
 article,
