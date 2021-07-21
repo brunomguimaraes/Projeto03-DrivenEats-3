@@ -11,7 +11,10 @@
     height: 92px;
     background-color: #CF2b2b;
     padding: 16px 24px 0px;
-
+    position: fixed;
+    left:0;
+    top:0;
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.25); ;
 }
 
 .app-title{
@@ -34,6 +37,7 @@
 
 .container{
     background-color: #e5e5e5 ;
+    padding: 108px 0px 92px;
 }
 
 
@@ -42,17 +46,15 @@
 /*---------------- Beginning of the sets of menus ----------------*/
 .menu{
     width: 100%;
-    padding-top: 32px;
-    padding-bottom: 16px;
+    padding-top: 16px;
 
 }
 
 .menu ul{
     display: flex;
-    margin-top: 17px;
     overflow-x: scroll;
     height: 100%;
-    padding: 0px 18px;
+    padding: 17px 18px;
 }
 
 .menu li{
@@ -66,6 +68,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    box-shadow: 0px 0px 4px 4px rgba(180, 180, 180, 0.1); ;
 }
 
 .menu li:last-child{
@@ -124,6 +127,9 @@
     align-items: center;
     justify-content: center;
     padding: 16px 24px;
+    position: fixed;
+    left:0;
+    bottom:0;
 }
 
 .app-bottom button{
