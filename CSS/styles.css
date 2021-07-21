@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+
+
+.titulo{
+    font-family: 'Righteous', cursive;
+    font-weight: 400;
+}
+
+.texto-geral{
+    font-family: 'Roboto', sans-serif;
+}
