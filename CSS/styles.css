@@ -6,7 +6,7 @@
 /*---------------- Beginning of the top of the page ----------------*/
 
 
-.app-top{
+.top-bar{
     width:100%;
     height: 92px;
     background-color: #CF2b2b;
@@ -17,14 +17,14 @@
     box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.25); ;
 }
 
-.app-title{
+.top-bar-title{
     font-family: 'Righteous', cursive;
     font-weight: 400;
     font-size: 44px;
     color: #FFFFFF;
 }
 
-.app-subtitle{
+.top-bar-subtitle{
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 18px;
@@ -64,11 +64,12 @@
     margin-right: 16px;
     border-radius: 9px;
     flex-shrink: 0;
-    padding: 18px 14px 14px;
+    box-shadow: 0px 0px 4px 4px rgba(180, 180, 180, 0.1); 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    box-shadow: 0px 0px 4px 4px rgba(180, 180, 180, 0.1); ;
+    padding: 18px 14px 14px;
+    position: relative;
 }
 
 .menu li:last-child{
@@ -77,10 +78,14 @@
 
 .menu img{
     height: 87px;
-    width: 144px;
+    width: 100%;
     border-radius: 4px;
     object-fit: cover;
     margin-bottom: 7px;
+}
+
+.menu ion-icon{
+    display: none;
 }
 
 .menu-title{
@@ -91,7 +96,7 @@
     margin-left: 18px;
 }
 
-.option-title{
+.item-title{
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 700;
@@ -99,7 +104,7 @@
     margin-bottom: 8px;
 }
 
-.option-subtitle{
+.item-subtitle{
     font-family: 'Roboto', sans-serif;
     font-size: 15px;
     font-weight: 300;
@@ -107,19 +112,39 @@
     margin-bottom: 12px;
 }
 
-.option-price{
+.item-price{
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 400;
     color: #000000;
 }
 
+/*--------------- Beginning of the Javascript Classes for the menus --------------------*/
+
+.menu .activated-item{
+    box-shadow: inset 0px 0px 0px 7px green;
+}
+
+.menu .activated-item ion-icon{
+    display: block;
+    position: absolute;
+    bottom: 10px;
+    right: 13px;
+    font-size: 20px;
+    color: green;
+
+
+}
+
+
+
+/*--------------- End of the Javascript Classes for the menus --------------------*/
 
 /*---------------- End of the sets of menus ----------------*/
 
 /*---------------- Beginning of the bottom of the app ----------------*/
 
-.app-bottom{
+.bottom-bar{
     height:92px;
     width: 100%;
     background-color: #ffffff;
@@ -130,9 +155,10 @@
     position: fixed;
     left:0;
     bottom:0;
+    box-shadow: 0px 0px 2px 2px rgba(180, 180, 180, 0.1); ;;
 }
 
-.app-bottom button{
+.bottom-bar button{
     width: 100%;
     height:53px;
     background-color: #cbcbcb;
