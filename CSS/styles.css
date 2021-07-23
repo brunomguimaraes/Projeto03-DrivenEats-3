@@ -12,6 +12,7 @@
     background-color: #CF2b2b;
     padding: 16px 24px 0px;
     position: fixed;
+    z-index:2;
     left:0;
     top:0;
     box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.25); ;
@@ -128,7 +129,7 @@
 .menu .activated-item ion-icon{
     display: block;
     position: absolute;
-    bottom: 10px;
+    bottom: 15px;
     right: 13px;
     font-size: 20px;
     color: #32B72F;
@@ -153,6 +154,7 @@
     justify-content: center;
     padding: 16px 24px;
     position: fixed;
+    z-index: 2;
     left:0;
     bottom:0;
     box-shadow: 0px 0px 2px 2px rgba(180, 180, 180, 0.1); ;;
@@ -171,6 +173,10 @@
     color: #ffffff;
 }
 
+.bottom-bar .activated-button {
+    background-color: #32B72F; 
+    font-weight: 700;
+}
 
 
 
