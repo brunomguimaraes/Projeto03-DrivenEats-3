@@ -15,13 +15,17 @@ function CancelOrder() {
 }
 
 function FinishOrder() {
+    let ClientName = prompt("Qual é o seu nome?");
+    let ClientAdress = prompt("Qual é o seu endereço?");
     TotalPrice = MainDishPrice + DrinkPrice + DesertPrice;
     TotalPrice = TotalPrice.toFixed(2);
     let WhatsappMessage = "Olá, gostaria de fazer o pedido:\n";
     WhatsappMessage = WhatsappMessage + "- Prato: " + MainDishName + "\n";
     WhatsappMessage = WhatsappMessage + "- Bebida: " + DrinkName + "\n";
     WhatsappMessage = WhatsappMessage + "- Sobremesa: " + DesertName + "\n";
-    WhatsappMessage = WhatsappMessage + "Total: R$ " + TotalPrice;
+    WhatsappMessage = WhatsappMessage + "Total: R$ " + TotalPrice + "\n" + "\n";
+    WhatsappMessage = WhatsappMessage + "Nome: " + ClientName + "\n";
+    WhatsappMessage = WhatsappMessage + "Endereço: " + ClientAdress;
     let WebLink = "https://wa.me/5521988405128?text=" + encodeURIComponent(WhatsappMessage);
     window.open(WebLink, '_blank');
 }
