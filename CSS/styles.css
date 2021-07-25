@@ -2,11 +2,9 @@
     box-sizing: border-box;
 }
 
-
 /*---------------- Beginning of the top of the page ----------------*/
 
-
-.top-bar{
+.top-bar {
     width:100%;
     height: 92px;
     background-color: #CF2b2b;
@@ -18,14 +16,14 @@
     box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.25); ;
 }
 
-.top-bar-title{
+.top-bar-title {
     font-family: 'Righteous', cursive;
     font-weight: 400;
     font-size: 44px;
     color: #FFFFFF;
 }
 
-.top-bar-subtitle{
+.top-bar-subtitle {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 18px;
@@ -34,31 +32,25 @@
 
 /*---------------- End of the top of the page ----------------*/
 
-
-
-.container{
+.container {
     background-color: #e5e5e5 ;
     padding: 108px 0px 92px;
 }
 
-
-
-
 /*---------------- Beginning of the sets of menus ----------------*/
-.menu{
+.menu {
     width: 100%;
     padding-top: 16px;
-
 }
 
-.menu ul{
+.menu ul {
     display: flex;
     overflow-x: scroll;
     height: 100%;
     padding: 17px 18px;
 }
 
-.menu li{
+.menu li {
     width: 172px;
     min-height: 100%;
     background-color: #FFFFFF;
@@ -73,11 +65,11 @@
     position: relative;
 }
 
-.menu li:last-child{
+.menu li:last-child {
     margin-right:0px;
 }
 
-.menu img{
+.menu img {
     height: 87px;
     width: 100%;
     border-radius: 4px;
@@ -85,11 +77,11 @@
     margin-bottom: 7px;
 }
 
-.menu ion-icon{
+.menu ion-icon {
     display: none;
 }
 
-.menu-title{
+.menu-title {
     font-family: 'Righteous', cursive;
     font-weight: 400;
     font-size: 26px;
@@ -97,7 +89,7 @@
     margin-left: 18px;
 }
 
-.item-title{
+.menu .item-title {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 700;
@@ -105,7 +97,7 @@
     margin-bottom: 8px;
 }
 
-.item-subtitle{
+.menu .item-subtitle {
     font-family: 'Roboto', sans-serif;
     font-size: 15px;
     font-weight: 300;
@@ -113,39 +105,31 @@
     margin-bottom: 12px;
 }
 
-.item-price{
+.menu .item-price {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 400;
     color: #000000;
 }
 
-/*--------------- Beginning of the Javascript Classes for the menus --------------------*/
-
-.menu .activated-item{
+.menu .activated-item {
     box-shadow: inset 0px 0px 0px 7px #32B72F;
 }
 
-.menu .activated-item ion-icon{
+.menu .activated-item ion-icon {
     display: block;
     position: absolute;
     bottom: 15px;
     right: 13px;
     font-size: 20px;
     color: #32B72F;
-
-
 }
-
-
-
-/*--------------- End of the Javascript Classes for the menus --------------------*/
 
 /*---------------- End of the sets of menus ----------------*/
 
 /*---------------- Beginning of the bottom of the app ----------------*/
 
-.bottom-bar{
+.bottom-bar {
     height:92px;
     width: 100%;
     background-color: #ffffff;
@@ -160,13 +144,12 @@
     box-shadow: 0px 0px 2px 2px rgba(180, 180, 180, 0.1);
 }
 
-.bottom-bar button{
+.bottom-bar button {
     width: 100%;
     height:53px;
     background-color: #cbcbcb;
     border-radius: calc(53px / 2);
     padding: 0px 48px;
-
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     font-weight: 400;
@@ -181,7 +164,7 @@
 /*---------------- End of the bottom of the app ----------------*/
 
 /*---------------- Beginning of the confirmation Screen ----------------*/
-.confirmation-screen{
+.confirmation-screen {
     width:100%;
     height: 100%;
     position: fixed;
@@ -195,11 +178,11 @@
     padding: 0px 18px;
 }
 
-.confirmation-screen.hidden{
+.confirmation-screen.hidden {
     display: none;
 }
 
-.confirmation-screen ul{
+.confirmation-screen ul {
     width: 100%;
     background-color: #50D074 ;
     border-radius: 9px;
@@ -215,36 +198,33 @@
     font-weight: 700;
 }
 
-
-.confirmation-screen li{
+.confirmation-screen li {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-
 }
 
-.confirmation-screen li:first-child{
+.confirmation-screen li:first-child {
     margin-bottom: 28px;
 }
 
-.confirmation-screen p:first-child{
+.confirmation-screen p:first-child {
     margin-right: 24px;
 }
 
-.confirmation-screen .price-line{
+.confirmation-screen .price-line {
     justify-content: space-between;
 }
 
 .confirmation-screen .main-dish,
 .confirmation-screen .drink,
-.confirmation-screen .desert{
+.confirmation-screen .desert {
     font-weight: 400;
     margin-bottom: 16px;
 }
 
-
-.confirmation-screen .finish-order{
+.confirmation-screen .finish-order {
     width: 100%;
     color: #50D074;
     background-color: #FFFFFF;
@@ -254,9 +234,8 @@
     margin-bottom: 16px;
 }
 
-.confirmation-screen .cancel-order{
+.confirmation-screen .cancel-order {
     font-size: 20px;
 }
-
 
 /*---------------- End of the confirmation Screen ----------------*/
