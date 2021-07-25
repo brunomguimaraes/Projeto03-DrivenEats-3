@@ -7,9 +7,15 @@ let DrinkPrice;
 let DesertSelection;
 let DesertName;
 let DesertPrice;
+let TotalPrice;
+
+function CancelOrder() {
+    let ConfirmationScreen = document.querySelector(".confirmation-screen");
+    ConfirmationScreen.classList.add("hidden");
+}
 
 function FinishOrder() {
-    let TotalPrice = MainDishPrice + DrinkPrice + DesertPrice;
+    TotalPrice = MainDishPrice + DrinkPrice + DesertPrice;
     TotalPrice = TotalPrice.toFixed(2);
     let WhatsappMessage = "Olá, gostaria de fazer o pedido:\n";
     WhatsappMessage = WhatsappMessage + "- Prato: " + MainDishName + "\n";
@@ -19,6 +25,30 @@ function FinishOrder() {
     let WebLink = "https://wa.me/5521988405128?text=" + encodeURIComponent(WhatsappMessage);
     window.open(WebLink, '_blank');
 }
+
+function InsertNameAndPrice (ConfirmationScreen,ItemClass,ItemName,ItemPrice){
+    let ItemLine = ConfirmationScreen.querySelector(ItemClass);
+    ItemLine.firstElementChild.innerText = ItemName;
+    if (ItemName === "Total"){
+        ItemPrice = "R$ " + ItemPrice.toFixed(2);
+    } else {
+        ItemPrice = ItemPrice.toFixed(2);
+    }
+    ItemPrice = ItemPrice.replace(".",",");
+    ItemLine.lastElementChild.innerText = ItemPrice;
+}
+
+function ConfirmOrder (){
+    let ConfirmationScreen = document.querySelector(".confirmation-screen");
+    InsertNameAndPrice (ConfirmationScreen,".main-dish",MainDishName,MainDishPrice);
+    InsertNameAndPrice (ConfirmationScreen,".drink",DrinkName,DrinkPrice);
+    InsertNameAndPrice (ConfirmationScreen,".desert",DesertName,DesertPrice);
+    TotalPrice = MainDishPrice + DrinkPrice + DesertPrice;
+    InsertNameAndPrice (ConfirmationScreen,".total","Total",TotalPrice);
+    ConfirmationScreen.classList.remove("hidden");
+
+}
+
 
 function TransformPriceIntoNumber(StringPrice) {
     StringPrice = StringPrice.replace("R$ ","");
@@ -71,7 +101,7 @@ function EvaluateBottomButton() {
         let BottomButton = document.querySelector(".bottom-bar button");
         BottomButton.classList.add("activated-button");
         BottomButton.innerHTML = "Fechar pedido";
-        BottomButton.onclick = FinishOrder;
+        BottomButton.onclick = ConfirmOrder;
     }
 }
 

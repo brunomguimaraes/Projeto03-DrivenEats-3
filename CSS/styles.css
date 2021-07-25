@@ -195,6 +195,10 @@
     padding: 0px 18px;
 }
 
+.confirmation-screen.hidden{
+    display: none;
+}
+
 .confirmation-screen ul{
     width: 100%;
     background-color: #50D074 ;
@@ -215,12 +219,17 @@
 .confirmation-screen li{
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 100%;
 
 }
 
 .confirmation-screen li:first-child{
     margin-bottom: 28px;
+}
+
+.confirmation-screen p:first-child{
+    margin-right: 24px;
 }
 
 .confirmation-screen .price-line{
